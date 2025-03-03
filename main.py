@@ -19,7 +19,7 @@ FIRMWARE = "firmware.ini"
 FIXES = "fixes.ini"
 
 def hashfile(f):
-    BUF_SIZE = 65536 
+    BUF_SIZE = 65536
     sha256 = hashlib.sha256()
 
     with open(f, 'rb') as f:
@@ -37,7 +37,7 @@ def dumpini(d, filename="sfixes.ini"):
     for section in d.keys():
         config[section] = {}
         for option in d[section]:
-            config[section][option] = str(d[section][option])    
+            config[section][option] = str(d[section][option])
     with open(filename, 'w') as f:
         config.write(f)
     return
